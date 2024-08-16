@@ -1,3 +1,4 @@
+import { Plus } from "lucide-react";
 import { useState } from "react";
 
 interface AddTodoFormProps {
@@ -26,9 +27,9 @@ export default function AddTodoForm({ onSubmit }: AddTodoFormProps) {
       />
       <button
         type="submit"
-        className="w-16 rounded-e-md bg-slate-900 text-white hover:bg-slate-800"
+        className="w-10 rounded-e-md bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center"
       >
-        &#43;
+        <Plus />
       </button>
     </form>
   );

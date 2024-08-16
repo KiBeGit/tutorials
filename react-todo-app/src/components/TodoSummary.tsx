@@ -1,0 +1,29 @@
+import { Todo } from "../types/todo";
+
+interface TodoSummaryProps {
+  todos: Todo[];
+  deleteAllCompletedTodos: () => void;
+}
+
+export default function TodoSummary({
+  todos,
+  deleteAllCompletedTodos,
+}: TodoSummaryProps) {
+  const completedTodos = todos.filter((todo) => todo.completed);
+
+  return (
+    <div className="text-center space-y-2">
+      <p className="text-sm font-medium">
+        {completedTodos.length}/{todos.length} Aufgaben erledigt
+      </p>
+      {completedTodos.length > 0 && (
+        <button
+          onClick={deleteAllCompletedTodos}
+          className="text-red-500 hover:underline text-sm font-medium"
+        >
+          Erledigte Aufgaben löschen
+        </button>
+      )}
+    </div>
+  );
+}
