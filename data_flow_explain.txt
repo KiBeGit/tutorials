@@ -1,0 +1,7 @@
+State ist ein React-Object, dass Daten oder Informationen über eine Komponente enthalten kann.
+Unidirectional bedeutet, dass unsere Daten nur in eine Richtung laufen. Von oben nach unten.
+Wir haben ein State in der obersten Komponente und können den Value vom State über die sogenannten Props (Argumente) den anderen Komponenten weiter geben.
+Z.B. haben wird der Todo-State zum Todo-Item gegeben. Wenn jetzt eine Änderung in der Komponente, die die den State benutzt geschieht, bspw. wird die Checkbox angehackt, dann wird die Komponente neu gerendert.
+Rendern von Webseiten bedeutet, wie der Browser HTML-, CSS-, & JS-Code in eine visuellle Darstellung umwandelt, die der Benutzer sehen und interagieren kann.
+Wir haben also den State immer in der Parent-Komponente, die den State am Ende braucht.
+Wenn wir jetzt den State aus einer Child-Komponente updaten wollen, müssen wir Callbacks nutzen.

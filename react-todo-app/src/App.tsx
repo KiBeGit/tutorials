@@ -19,6 +19,9 @@ function App() {
         <AddTodoForm onSubmit={addTodo} />
         <TodoList
           todos={todos}
+          // Hier muss in den Callback nur der Funktion-Name übergeben werden
+          // Die Callback-Funktion muss hier rein, da wir die Props in der Komponente definiert haben.
+          // Die Funktion setTodos nutzt jetzt die Values und Daten aus der TodoItem un dann TodoList, um Aktionen durchführen zu können
           onCompletedChange={setTodoCompleted}
           onDelete={deleteTodo}
         />
